@@ -1,0 +1,2 @@
+# Fashionista
+MEAN Stack project
