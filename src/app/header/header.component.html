@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="background-color: #e3f2fd;">
   <div class="container">
     <a *ngIf="auth.getRole()=='admin'" routerLink="/" class="navbar-brand" routerLinkActive="active">Admin Portal</a>
-    <a *ngIf="auth.getRole()!='admin'" routerLink="/" class="navbar-brand" routerLinkActive="active">Chennaiyin FC Merch</a>
+    <a *ngIf="auth.getRole()!='admin'" routerLink="/" class="navbar-brand" routerLinkActive="active">User Shopping</a>
     <button class="navbar-toggler" type="button" (click)="isCollapsed = !isCollapsed">
       &#9776;
     </button>

@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit {
     this.route.queryParams.subscribe((params) => {
       const key1 = 'loggedin';
       if (params[key1] === 'success') {
-        this.notify = 'You have been successfully loggedin. Welcome home';
+        this.notify = 'You have been successfully logged in. Welcome home';
       }
     });
   }
