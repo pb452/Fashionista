@@ -1,0 +1,32 @@
+<div *ngIf="notify" class="alert alert-success container marge">
+    {{ notify }}
+</div>
+<div class="container" *ngIf="auth.getRole()=='admin'">
+    <div [style.height]="'300px'">
+        <h2 class="text-center d-block p-5">Welcome to Admin portal</h2>
+        
+    </div>
+    <div [style.height]="'300px'" class="mb-5">
+        <div class="d-flex h-100 text-center flex-wrap ">
+            <div class="p-5 m-5 bg-info text-light rounded">
+                <a [routerLink]="['/brand-list']" class=" d-block h-100 text-light"> <h3>Manage Types</h3></a>  
+            </div>
+            <div class="p-5 m-5 bg-info text-light">
+                <a [routerLink]="['/user-list']" class=" d-block h-100 text-light"> <h3>Manage Users</h3></a>
+            </div>
+            <div class="p-5 m-5 bg-info text-light">
+                <a [routerLink]="['/manage-product']" class=" d-block h-100 text-light"> <h3>Manage Product</h3></a>
+            </div>
+        </div>
+        </div>
+
+</div>
+<div class="container" *ngIf="auth.getRole()!='admin'">
+    <div class="bg-primary rounded-lg mt-5 text-dark text-center" [style.height]="'300px'">
+        <h2 class="text-center d-block p-5">Welcome to Fashionista Shopping</h2>
+        <p class="text text-center">Check here for shopping</p>
+        <a [routerLink]="['/product-list']" class="btn btn-success"> Shop</a>
+        
+    </div>
+
+</div>
